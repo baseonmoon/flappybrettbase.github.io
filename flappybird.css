@@ -1,0 +1,159 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #000000;
+    background-image: url("flappy.png");
+    backdrop-filter: blur(3px) brightness(20%) saturate(60%);
+    height: 3000px;
+    background-attachment: fixed;
+}
+
+#board {
+    /* background-color: skyblue; */
+    background-image: url("./flappybirdbg4.png");
+}
+
+
+h1 {
+    margin-top: 2px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 80px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-top: 28px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.copybutton {
+    display: inline-flex;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 55px;
+    border-color: white;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(153, 161, 189);
+    margin-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    cursor: pointer;
+    background-color: #002e63;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 5px;
+}
+.copybutton:hover {
+    background-color: #000000;
+    color: white;
+}
+.flex-wrapper2 {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border-width: 10px;
+    border-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 60%;
+    border-style: solid;
+    margin-top: 30px;
+    width: fit-content;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: #002e63;
+}
+.flex-wrapper {
+    font-family: "Londrina Solid", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border-width: 10px;
+    width: 60%;
+    border-style: solid;
+    border-color: #ffffff;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #002e63;
+}
+
+.single-chart {
+    font-family: "Londrina Solid", sans-serif;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.circular-chart {
+    font-family: "Londrina Solid", sans-serif;
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+}
+
+.circle-bg {
+    font-family: "Londrina Solid", sans-serif;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 3.8;
+}
+
+.circle {
+    font-family: "Londrina Solid", sans-serif;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.orange .circle {
+    stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+    stroke: #4CC790;
+}
+
+.circular-chart.blue .circle {
+    stroke: #3c9ee5;
+}
+
+.percentage {
+    fill: #ffffff;
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
+
+.buttonsdiv{
+    display: block;
+}
+
+iframe{
+    margin-top: 20px;
+    width: 50%;
+    height: 1000px;
+}
+
+.lastsection{
+    margin-top: 7%;
+}
