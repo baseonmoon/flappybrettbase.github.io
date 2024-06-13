@@ -4,8 +4,6 @@ body {
     background-color: #000000;
     background-image: url("flappy.png");
     backdrop-filter: blur(3px) brightness(20%) saturate(60%);
-    height: 3000px;
-    background-attachment: fixed;
 }
 
 #board {
@@ -23,6 +21,7 @@ h1 {
     font-style: normal;
     font-size: 80px;
     margin-bottom: 5px;
+    margin-left: auto;
 }
 
 h2 {
@@ -54,15 +53,17 @@ h2 {
     border-radius: 10px;
     border-width: 5px;
 }
+
 .copybutton:hover {
     background-color: #000000;
     color: white;
 }
+
 .flex-wrapper2 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
-    border-width: 10px;
+    border-width: 5px;
     border-color: #ffffff;
     padding-left: 20px;
     padding-right: 20px;
@@ -72,15 +73,16 @@ h2 {
     width: fit-content;
     display: inline-block;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     background-color: #002e63;
 }
+
 .flex-wrapper {
     font-family: "Londrina Solid", sans-serif;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
-    border-width: 10px;
+    border-width: 5px;
     width: 60%;
     border-style: solid;
     border-color: #ffffff;
@@ -144,16 +146,71 @@ h2 {
     text-anchor: middle;
 }
 
-.buttonsdiv{
+.buttonsdiv {
     display: block;
 }
 
-iframe{
+iframe {
     margin-top: 20px;
     width: 50%;
     height: 1000px;
 }
 
-.lastsection{
+.lastsection {
     margin-top: 7%;
+}
+h4{
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+    h4{
+        font-size: 25px;
+    }
+
+    h1 {
+        display: inline-flex;
+        font-size: 45px;
+    }
+
+    iframe {
+        margin-top: 20px;
+        width: 95%;
+        height: 700px;
+    }
+
+    .copybutton {
+        font-size: 18px;
+        border-width: 3px;
+    }
+    .flex-wrapper {
+        width: 90%;
+        border-width: 3px;
+
+    }
+    .flex-wrapper2 {
+        width: 80%;
+        border-width: 3px;
+
+    }
+    h2{
+        font-size: 18px;
+    }
+    .socials{
+        display: flex;
+    }
+
+    h3{
+        font-size: 15px;
+    }
+    .copybutton{
+        margin-top: 5%;
+        font-size: 30px;
+    }
+}
+
+canvas{
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 15px;
 }

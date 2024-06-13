@@ -16,15 +16,15 @@ let boardHeight = 750;
 let context;
 
 if (mobileCheck()) {
-    let boardWidth = 1800;
-    let boardHeight = 750;
+    boardWidth = 400;
+    boardHeight = 700;
 }
 
 
 
 //bird
-let birdWidth = 1000 / 12.0; //width/height ratio = 408/228 = 17/12
-let birdHeight = 1000 / 12.0;
+let birdWidth = 1000 / 14.0; //width/height ratio = 408/228 = 17/12
+let birdHeight = 1000 / 14.0;
 let birdX = boardWidth / 4;
 let birdY = 10;
 let birdImg;
@@ -128,7 +128,15 @@ function update() {
     if (gameOver) {
         context.font = "90px Londrina Solid";
         context.fillStyle = "red"
-        context.fillText("Press Spcae to Play", boardWidth / 2 - 320, boardHeight / 2 - 60);
+        if (mobileCheck()) {
+            context.font = "45px Londrina Solid";
+            context.fillStyle = "red"
+            context.fillText("Tab Screen to Play", boardWidth / 2 - 170, boardHeight / 2 - 60);
+
+        } else {
+            context.fillText("Press Space to Play", boardWidth / 2 - 320, boardHeight / 2 - 60);
+
+        }
 
         context.font = "45px Londrina Solid";
         context.fillStyle = "yellow"
@@ -187,6 +195,18 @@ function moveBird(e) {
         }
     }
 }
+document.addEventListener('pointerdown', (event) => {
+    //jump
+    velocityY = -6;
+
+    //reset game
+    if (gameOver) {
+        bird.y = birdY;
+        pipeArray = [];
+        score = 0;
+        gameOver = false;
+    }
+});
 
 function detectCollision(a, b) {
     return a.x < b.x + b.width &&   //a's top left corner doesn't reach b's top right corner
